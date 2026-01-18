@@ -6,19 +6,22 @@ Most people think Excel is just for rows and columns. I decided to push it furth
 
 <H1> Calculation methods used throughout the workbook:<H1>
 <H5>
-1. <u> Key Metric Calculations </u>
-The dashboard uses specific formulas to calculate performance metrics:
   
+1. <>Key Metric Calculations
+   
+The dashboard uses specific formulas to calculate performance metrics:
 Total Revenue: Aggregated via a measure in the Data Model from the FactInternetSales table.
 Distinct Counts: Used for counting unique items (e.g., DCountr or CustomerKey) across the dataset.
 
-2.<U>Data Model & DAX (Power Pivot)</U>
+
+2.Data Model & DAX (Power Pivot)
 
 The file heavily relies on an internal Data Model (Power Pivot) rather than just standard cell-based formulas. 
-It contains:
+   It contains:
  MdxScript:   Used for complex calculations and defining measures within the PivotTables.
  Relationship Formulas: Data is linked across multiple tables like Geography, Product, Customer, and Territory using keys (e.g., ProductKey, CustomerKey) to allow for multi-dimensional analysis.
  Aggregations: The system uses Sum and Count aggregations defined in the FactInternetSales metadata to generate dashboard values.
+
 
 3. <U>Time-Based Analysis</U>
 
